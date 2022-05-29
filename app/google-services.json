@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "962660922557",
+    "project_id": "fidelitas-lugares",
+    "storage_bucket": "fidelitas-lugares.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962660922557:android:6fc09b41d8878c22e573d4",
+        "android_client_info": {
+          "package_name": "com.fidelitas_lugares"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "962660922557-kos7jcqv6r62ffmccfbbqodvoj97qepi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs9aSmJbiK4gtgxbY0T1VJ9-VuCe3U0cI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "962660922557-kos7jcqv6r62ffmccfbbqodvoj97qepi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

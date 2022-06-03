@@ -6,20 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import com.fidelitas_lugares.R
-import com.fidelitas_lugares.databinding.FragmentLugarBinding
+import com.fidelitas_lugares.databinding.FragmentAddLugarBinding
+import com.fidelitas_lugares.model.Lugar
 import com.fidelitas_lugares.viewmodel.lugarViewModel
 
 
 //(Semana 3) Al crear el fragmenteo desde mobile_navigation y borrar casi todo
-class LugarFragment : Fragment() {
+class AddLugarFragment : Fragment() {
 
     //Se encarga de buscar datos
     private lateinit var lugarViewModel: lugarViewModel
 
     //Acceso a la parte visual
-    private var _binding: FragmentLugarBinding? = null
+    private var _binding: FragmentAddLugarBinding? = null
     private val binding get()=_binding!!
 
 
@@ -28,13 +27,24 @@ class LugarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         lugarViewModel = ViewModelProvider(this)[lugarViewModel::class.java]
-        _binding = FragmentLugarBinding.inflate(inflater,container,false)
+        _binding = FragmentAddLugarBinding.inflate(inflater,container,false)
 
-        binding.btnAddLugar.setOnClickListener{
-            findNavController().navigate(R.id.action_nav_home_to_addLugarFragment)
-        }
+        binding.btnAgregar.setOnClickListener{addLugar()}
 
         return  binding.root
+    }
+
+    private fun addLugar() {
+        val Nombre = binding.txtNombre.text.toString()
+        val Correo = binding.txtCorreo.text.toString()
+        val Telefono = binding.txtTelefono.text.toString()
+        val SitioWeb = binding.txtSitioWeb.text.toString()
+
+        if(Nombre.isNotEmpty()){
+            val entLugar = Lugar(0,Nombre,Correo,Telefono,0.0,0.0,0.0,null,null)
+            lugarViewModel.addLugar(entLugar)
+        }
+
     }
 
     override fun onDestroyView() {

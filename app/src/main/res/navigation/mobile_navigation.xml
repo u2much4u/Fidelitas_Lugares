@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.fidelitas_lugares.ui.lugar.lugarFragment"
+        android:name="com.fidelitas_lugares.ui.lugar.LugarFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_lugar" >
         <action

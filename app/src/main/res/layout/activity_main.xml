@@ -22,7 +22,8 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textAlignment="textStart"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/labelcontraseña"
@@ -39,7 +40,8 @@
         android:ems="10"
         android:inputType="textPassword"
         android:textAlignment="textStart"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,14 +53,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/icono_register" />
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/icono_register"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btnlogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/icono_login" />
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/icono_login"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
 </LinearLayout>

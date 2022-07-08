@@ -41,8 +41,8 @@ class AddLugarFragment : Fragment() {
         val SitioWeb = binding.txtSitioWeb.text.toString()
 
         if(Nombre.isNotEmpty()){
-            val entLugar = Lugar(0,Nombre,Correo,Telefono,0.0,0.0,0.0,null,null)
-            lugarViewModel.addLugar(entLugar)
+            val entLugar = Lugar("",Nombre,Correo,Telefono,0.0,0.0,0.0,null,null)
+            lugarViewModel.SaveLugar(entLugar)
         }
 
     }

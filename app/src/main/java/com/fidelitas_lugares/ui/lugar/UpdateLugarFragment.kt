@@ -42,7 +42,7 @@ class UpdateLugarFragment : Fragment() {
 
         if(Nombre.isNotEmpty()){
             val entLugar = Lugar(0,Nombre,Correo,Telefono,0.0,0.0,0.0,null,null)
-            lugarViewModel.addLugar(entLugar)
+            lugarViewModel.updateLugar(entLugar)
         }
 
     }

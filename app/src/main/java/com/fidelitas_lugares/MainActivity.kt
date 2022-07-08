@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
 import javax.security.auth.login.LoginException
 
 class MainActivity : AppCompatActivity() {
@@ -86,5 +87,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,Principal::class.java)
             startActivity(intent)
         }
+    }
+
+    //verifica si el usuario se encuentra autenticado
+    public override fun onStar(){
+        super.onStart()
+        val usuario = auth.currentUser
+        actualiza(usuario)
     }
 }

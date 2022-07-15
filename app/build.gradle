@@ -63,6 +63,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     //implementation 'com.google.firebase:firebase-auth:21.0.5'
 
+    //(SEMANA 9) Conectar a FireStore
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
 
     //Navegación entre fragmentos
     implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"

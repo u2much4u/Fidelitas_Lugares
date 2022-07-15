@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //verifica si el usuario se encuentra autenticado
-    public override fun onStar(){
+    public fun onStar(){
         super.onStart()
         val usuario = auth.currentUser
         actualiza(usuario)

@@ -31,6 +31,8 @@ class UpdateLugarFragment : Fragment() {
 
         binding.btnActualizar.setOnClickListener{UpdateLugar()}
 
+
+
         return  binding.root
     }
 
@@ -41,8 +43,8 @@ class UpdateLugarFragment : Fragment() {
         val SitioWeb = binding.txtSitioWeb.text.toString()
 
         if(Nombre.isNotEmpty()){
-            val entLugar = Lugar(0,Nombre,Correo,Telefono,0.0,0.0,0.0,null,null)
-            lugarViewModel.updateLugar(entLugar)
+           // val entLugar = Lugar(0,Nombre,Correo,Telefono,0.0,0.0,0.0,null,null)
+           // lugarViewModel.updateLugar(entLugar)
         }
 
     }
